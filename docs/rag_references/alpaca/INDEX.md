@@ -1,0 +1,397 @@
+# Alpaca API & Market Data RAG Reference Index
+
+Total documented pages: 384
+
+## Categories
+
+### 1. Market Data (行情数据与历史 Bars)
+- [Mandatory Corporate Actions](./market_data/mandatory-corporate-actions.md): https://docs.alpaca.markets/us/docs/mandatory-corporate-actions.md
+- [Voluntary Corporate Actions](./market_data/voluntary-corporate-actions.md): https://docs.alpaca.markets/us/docs/voluntary-corporate-actions.md
+- [Crypto Pricing Data](./market_data/crypto-pricing-data.md): https://docs.alpaca.markets/us/docs/crypto-pricing-data.md
+- [Non-Trade Activities for Option Events](./market_data/non-trade-activities-for-option-events.md): https://docs.alpaca.markets/us/docs/non-trade-activities-for-option-events.md
+- [About Market Data API](./market_data/about-market-data-api.md): https://docs.alpaca.markets/us/docs/about-market-data-api.md
+- [Getting Started with Market Data API](./market_data/getting-started-with-alpaca-market-data.md): https://docs.alpaca.markets/us/docs/getting-started-with-alpaca-market-data.md
+- [Historical Stock Data](./market_data/historical-stock-data-1.md): https://docs.alpaca.markets/us/docs/historical-stock-data-1.md
+- [Historical News Data](./market_data/historical-news-data.md): https://docs.alpaca.markets/us/docs/historical-news-data.md
+- [WebSocket Stream](./market_data/streaming-market-data.md): https://docs.alpaca.markets/us/docs/streaming-market-data.md
+- [Real-time Stock Data](./market_data/real-time-stock-pricing-data.md): https://docs.alpaca.markets/us/docs/real-time-stock-pricing-data.md
+- [Real-time Crypto Data](./market_data/real-time-crypto-pricing-data.md): https://docs.alpaca.markets/us/docs/real-time-crypto-pricing-data.md
+- [Real-time News](./market_data/streaming-real-time-news.md): https://docs.alpaca.markets/us/docs/streaming-real-time-news.md
+- [Market Data FAQ](./market_data/market-data-faq.md): https://docs.alpaca.markets/us/docs/market-data-faq.md
+
+### 2. Trading & Orders (交易、订单与账户)
+- [24/5 Trading](./trading/245-trading.md): https://docs.alpaca.markets/us/docs/245-trading.md
+- [Intraday Margin Rule for Non-Leverage Margin Accounts](./trading/intraday-margin-rule-for-non-leverage-margin-accounts.md): https://docs.alpaca.markets/us/docs/intraday-margin-rule-for-non-leverage-margin-accounts.md
+- [The Intraday Margin Rule](./trading/the-intraday-margin-rule-1.md): https://docs.alpaca.markets/us/docs/the-intraday-margin-rule-1.md
+- [Understanding FINRA’s New Intraday Margin Rule and the End of PDT](./trading/understanding-finras-new-intraday-margin-rule-and-the-end-of-pdt-1.md): https://docs.alpaca.markets/us/docs/understanding-finras-new-intraday-margin-rule-and-the-end-of-pdt-1.md
+- [Customer Account Opening](./trading/account-opening.md): https://docs.alpaca.markets/us/docs/account-opening.md
+- [Accounts Statuses](./trading/accounts-statuses.md): https://docs.alpaca.markets/us/docs/accounts-statuses.md
+- [International Accounts](./trading/international-accounts.md): https://docs.alpaca.markets/us/docs/international-accounts.md
+- [Domestic (USA) Accounts](./trading/domestic-usa-accounts.md): https://docs.alpaca.markets/us/docs/domestic-usa-accounts.md
+- [IRA Accounts Overview](./trading/ira-accounts-overview.md): https://docs.alpaca.markets/us/docs/ira-accounts-overview.md
+- [Crypto Trading](./trading/crypto-trading-1.md): https://docs.alpaca.markets/us/docs/crypto-trading-1.md
+- [Funding Accounts](./trading/funding-accounts.md): https://docs.alpaca.markets/us/docs/funding-accounts.md
+- [Trading](./trading/brokerapi-trading.md): https://docs.alpaca.markets/us/docs/brokerapi-trading.md
+- [Portfolio Rebalancing](./trading/portfolio-rebalancing.md): https://docs.alpaca.markets/us/docs/portfolio-rebalancing.md
+- [Account Status Events for KYCaaS](./trading/account-status-events-for-kycaas.md): https://docs.alpaca.markets/us/docs/account-status-events-for-kycaas.md
+- [Local Currency Trading (LCT)](./trading/local-currency-trading-lct.md): https://docs.alpaca.markets/us/docs/local-currency-trading-lct.md
+- [Options Trading Overview](./trading/options-trading-overview.md): https://docs.alpaca.markets/us/docs/options-trading-overview.md
+- [Custodial accounts](./trading/custodial-accounts.md): https://docs.alpaca.markets/us/docs/custodial-accounts.md
+- [About Trading API](./trading/trading-api.md): https://docs.alpaca.markets/us/docs/trading-api.md
+- [Getting Started with Trading API](./trading/getting-started-with-trading-api.md): https://docs.alpaca.markets/us/docs/getting-started-with-trading-api.md
+- [Working with /account](./trading/working-with-account.md): https://docs.alpaca.markets/us/docs/working-with-account.md
+- [Working with /assets](./trading/working-with-assets.md): https://docs.alpaca.markets/us/docs/working-with-assets.md
+- [Working with /orders](./trading/working-with-orders.md): https://docs.alpaca.markets/us/docs/working-with-orders.md
+- [Working with /positions](./trading/working-with-positions.md): https://docs.alpaca.markets/us/docs/working-with-positions.md
+- [Paper Trading](./trading/paper-trading.md): https://docs.alpaca.markets/us/docs/paper-trading.md
+- [Trading Account](./trading/account-plans.md): https://docs.alpaca.markets/us/docs/account-plans.md
+- [Crypto Spot Trading](./trading/crypto-trading.md): https://docs.alpaca.markets/us/docs/crypto-trading.md
+- [Crypto Orders](./trading/crypto-orders.md): https://docs.alpaca.markets/us/docs/crypto-orders.md
+- [Options Trading](./trading/options-trading.md): https://docs.alpaca.markets/us/docs/options-trading.md
+- [Options Orders](./trading/options-orders.md): https://docs.alpaca.markets/us/docs/options-orders.md
+- [Options Level 3 Trading](./trading/options-level-3-trading.md): https://docs.alpaca.markets/us/docs/options-level-3-trading.md
+- [Account Activities](./trading/account-activities.md): https://docs.alpaca.markets/us/docs/account-activities.md
+- [Fractional Trading](./trading/fractional-trading.md): https://docs.alpaca.markets/us/docs/fractional-trading.md
+- [Margin and Short Selling](./trading/margin-and-short-selling.md): https://docs.alpaca.markets/us/docs/margin-and-short-selling.md
+- [Placing Orders](./trading/orders-at-alpaca.md): https://docs.alpaca.markets/us/docs/orders-at-alpaca.md
+- [24/5 Trading](./trading/245-trading-for-trading-api.md): https://docs.alpaca.markets/us/docs/245-trading-for-trading-api.md
+- [Position Average Entry Price Calculation](./trading/position-average-entry-price-calculation.md): https://docs.alpaca.markets/us/docs/position-average-entry-price-calculation.md
+- [Intraday Margin Rule for Non-Leverage Margin Accounts](./trading/understanding-the-new-intraday-margin-rule.md): https://docs.alpaca.markets/us/docs/understanding-the-new-intraday-margin-rule.md
+- [The Intraday Margin Rule](./trading/the-intraday-margin-rule.md): https://docs.alpaca.markets/us/docs/the-intraday-margin-rule.md
+- [Understanding FINRA’s New Intraday Margin Rule and the End of PDT](./trading/understanding-finras-new-intraday-margin-rule-and-the-end-of-pdt.md): https://docs.alpaca.markets/us/docs/understanding-finras-new-intraday-margin-rule-and-the-end-of-pdt.md
+- [Using OAuth2 and Trading API](./trading/using-oauth2-and-trading-api.md): https://docs.alpaca.markets/us/docs/using-oauth2-and-trading-api.md
+
+### 3. API Reference (全量接口定义)
+- [Issue tokens](./reference/issuetokens.md): https://docs.alpaca.markets/us/reference/issuetokens.md
+- [Get Account](./reference/getaccount-1.md): https://docs.alpaca.markets/us/reference/getaccount-1.md
+- [Get Assets](./reference/get-v2-assets-1.md): https://docs.alpaca.markets/us/reference/get-v2-assets-1.md
+- [Get an Asset by ID or Symbol](./reference/get-v2-assets-symbol_or_asset_id.md): https://docs.alpaca.markets/us/reference/get-v2-assets-symbol_or_asset_id.md
+- [Get Option Contracts](./reference/get-options-contracts.md): https://docs.alpaca.markets/us/reference/get-options-contracts.md
+- [Get an option contract by ID or Symbol](./reference/get-option-contract-symbol_or_id.md): https://docs.alpaca.markets/us/reference/get-option-contract-symbol_or_id.md
+- [Retrieve a Specific Announcement](./reference/get-v2-corporate_actions-announcements-id-1.md): https://docs.alpaca.markets/us/reference/get-v2-corporate_actions-announcements-id-1.md
+- [Retrieve Announcements](./reference/get-v2-corporate_actions-announcements-1.md): https://docs.alpaca.markets/us/reference/get-v2-corporate_actions-announcements-1.md
+- [Create an Order](./reference/postorder.md): https://docs.alpaca.markets/us/reference/postorder.md
+- [Get All Orders](./reference/getallorders-1.md): https://docs.alpaca.markets/us/reference/getallorders-1.md
+- [Delete All Orders](./reference/deleteallorders-1.md): https://docs.alpaca.markets/us/reference/deleteallorders-1.md
+- [Get Order by Client Order ID](./reference/getorderbyclientorderid.md): https://docs.alpaca.markets/us/reference/getorderbyclientorderid.md
+- [Get Order by ID](./reference/getorderbyorderid-1.md): https://docs.alpaca.markets/us/reference/getorderbyorderid-1.md
+- [Replace Order by ID](./reference/patchorderbyorderid-1.md): https://docs.alpaca.markets/us/reference/patchorderbyorderid-1.md
+- [Delete Order by ID](./reference/deleteorderbyorderid-1.md): https://docs.alpaca.markets/us/reference/deleteorderbyorderid-1.md
+- [All Open Positions](./reference/getallopenpositions.md): https://docs.alpaca.markets/us/reference/getallopenpositions.md
+- [Close All Positions](./reference/deleteallopenpositions-1.md): https://docs.alpaca.markets/us/reference/deleteallopenpositions-1.md
+- [Get an Open Position](./reference/getopenposition-1.md): https://docs.alpaca.markets/us/reference/getopenposition-1.md
+- [Close a Position](./reference/deleteopenposition-1.md): https://docs.alpaca.markets/us/reference/deleteopenposition-1.md
+- [Exercise an Options Position](./reference/optionexercise.md): https://docs.alpaca.markets/us/reference/optionexercise.md
+- [Get Account Portfolio History](./reference/getaccountportfoliohistory-1.md): https://docs.alpaca.markets/us/reference/getaccountportfoliohistory-1.md
+- [Get All Watchlists](./reference/getwatchlists-1.md): https://docs.alpaca.markets/us/reference/getwatchlists-1.md
+- [Create Watchlist](./reference/postwatchlist-1.md): https://docs.alpaca.markets/us/reference/postwatchlist-1.md
+- [Get Watchlist by ID](./reference/getwatchlistbyid-1.md): https://docs.alpaca.markets/us/reference/getwatchlistbyid-1.md
+- [Update Watchlist By Id](./reference/updatewatchlistbyid-1.md): https://docs.alpaca.markets/us/reference/updatewatchlistbyid-1.md
+- [Add Asset to Watchlist](./reference/addassettowatchlist-1.md): https://docs.alpaca.markets/us/reference/addassettowatchlist-1.md
+- [Delete Watchlist By Id](./reference/deletewatchlistbyid-1.md): https://docs.alpaca.markets/us/reference/deletewatchlistbyid-1.md
+- [Get Watchlist by Name](./reference/getwatchlistbyname-1.md): https://docs.alpaca.markets/us/reference/getwatchlistbyname-1.md
+- [Update Watchlist By Name](./reference/updatewatchlistbyname-1.md): https://docs.alpaca.markets/us/reference/updatewatchlistbyname-1.md
+- [Add Asset to Watchlist By Name](./reference/addassettowatchlistbyname-1.md): https://docs.alpaca.markets/us/reference/addassettowatchlistbyname-1.md
+- [Delete Watchlist By Name](./reference/deletewatchlistbyname-1.md): https://docs.alpaca.markets/us/reference/deletewatchlistbyname-1.md
+- [Delete Symbol from Watchlist](./reference/removeassetfromwatchlist-1.md): https://docs.alpaca.markets/us/reference/removeassetfromwatchlist-1.md
+- [Get Account Configurations](./reference/getaccountconfig-1.md): https://docs.alpaca.markets/us/reference/getaccountconfig-1.md
+- [Account Configurations](./reference/patchaccountconfig-1.md): https://docs.alpaca.markets/us/reference/patchaccountconfig-1.md
+- [Retrieve Account Activities](./reference/getaccountactivities-2.md): https://docs.alpaca.markets/us/reference/getaccountactivities-2.md
+- [Retrieve Account Activities of Specific Type](./reference/getaccountactivitiesbyactivitytype-1.md): https://docs.alpaca.markets/us/reference/getaccountactivitiesbyactivitytype-1.md
+- [Get US Market Calendar](./reference/legacycalendar.md): https://docs.alpaca.markets/us/reference/legacycalendar.md
+- [Get US Market Clock](./reference/legacyclock.md): https://docs.alpaca.markets/us/reference/legacyclock.md
+- [Get Market Calendar](./reference/calendar-2.md): https://docs.alpaca.markets/us/reference/calendar-2.md
+- [Get Market Clock](./reference/clock-1.md): https://docs.alpaca.markets/us/reference/clock-1.md
+- [Retrieve Crypto Funding Wallets](./reference/listcryptofundingwallets.md): https://docs.alpaca.markets/us/reference/listcryptofundingwallets.md
+- [Retrieve Crypto Funding Transfers](./reference/listcryptofundingtransfers.md): https://docs.alpaca.markets/us/reference/listcryptofundingtransfers.md
+- [Request a New Withdrawal](./reference/createcryptotransferforaccount.md): https://docs.alpaca.markets/us/reference/createcryptotransferforaccount.md
+- [Retrieve a Crypto Funding Transfer](./reference/getcryptofundingtransfer.md): https://docs.alpaca.markets/us/reference/getcryptofundingtransfer.md
+- [An array of whitelisted addresses](./reference/listwhitelistedaddress.md): https://docs.alpaca.markets/us/reference/listwhitelistedaddress.md
+- [Request a new whitelisted address](./reference/createwhitelistedaddress.md): https://docs.alpaca.markets/us/reference/createwhitelistedaddress.md
+- [Delete a whitelisted address](./reference/deletewhitelistedaddress.md): https://docs.alpaca.markets/us/reference/deletewhitelistedaddress.md
+- [Returns the estimated gas fee for a proposed transaction.](./reference/getcryptotransferestimate.md): https://docs.alpaca.markets/us/reference/getcryptotransferestimate.md
+- [Search for VASPs](./reference/searchvasps-1.md): https://docs.alpaca.markets/us/reference/searchvasps-1.md
+- [Update travel rule information for a whitelisted wallet](./reference/updatewhitelistedaddresstravelruleinfo-1.md): https://docs.alpaca.markets/us/reference/updatewhitelistedaddresstravelruleinfo-1.md
+- [Do Not Exercise an Options Position](./reference/optiondonotexercise.md): https://docs.alpaca.markets/us/reference/optiondonotexercise.md
+- [Mint a Tokenized Asset](./reference/posttokenizationmint.md): https://docs.alpaca.markets/us/reference/posttokenizationmint.md
+- [List Tokenization Requests](./reference/gettokenizationrequests.md): https://docs.alpaca.markets/us/reference/gettokenizationrequests.md
+- [Get Tokenization Request by ID](./reference/gettokenizationrequest.md): https://docs.alpaca.markets/us/reference/gettokenizationrequest.md
+- [Get Tokenization Request by `client_request_id`](./reference/gettokenizationrequestbyclientrequestid.md): https://docs.alpaca.markets/us/reference/gettokenizationrequestbyclientrequestid.md
+- [List Locates](./reference/listlocates.md): https://docs.alpaca.markets/us/reference/listlocates.md
+- [Create Locate](./reference/createlocates.md): https://docs.alpaca.markets/us/reference/createlocates.md
+- [Get Locate](./reference/getlocate.md): https://docs.alpaca.markets/us/reference/getlocate.md
+- [Get Locate Quotes](./reference/listlocatequotes.md): https://docs.alpaca.markets/us/reference/listlocatequotes.md
+- [Subscribe to Activity Events (SSE)](./reference/subscribetoactivitiessse.md): https://docs.alpaca.markets/us/reference/subscribetoactivitiessse.md
+- [Historical auctions](./reference/stockauctions-1.md): https://docs.alpaca.markets/us/reference/stockauctions-1.md
+- [Historical bars](./reference/stockbars.md): https://docs.alpaca.markets/us/reference/stockbars.md
+- [Latest bars](./reference/stocklatestbars-1.md): https://docs.alpaca.markets/us/reference/stocklatestbars-1.md
+- [Condition codes](./reference/stockmetaconditions-1.md): https://docs.alpaca.markets/us/reference/stockmetaconditions-1.md
+- [Exchange codes](./reference/stockmetaexchanges-1.md): https://docs.alpaca.markets/us/reference/stockmetaexchanges-1.md
+- [Historical quotes](./reference/stockquotes-1.md): https://docs.alpaca.markets/us/reference/stockquotes-1.md
+- [Latest quotes](./reference/stocklatestquotes-1.md): https://docs.alpaca.markets/us/reference/stocklatestquotes-1.md
+- [Snapshots](./reference/stocksnapshots-1.md): https://docs.alpaca.markets/us/reference/stocksnapshots-1.md
+- [Historical trades](./reference/stocktrades-1.md): https://docs.alpaca.markets/us/reference/stocktrades-1.md
+- [Latest trades](./reference/stocklatesttrades-1.md): https://docs.alpaca.markets/us/reference/stocklatesttrades-1.md
+- [Historical auctions (single)](./reference/stockauctionsingle-1.md): https://docs.alpaca.markets/us/reference/stockauctionsingle-1.md
+- [Historical bars (single symbol)](./reference/stockbarsingle-1.md): https://docs.alpaca.markets/us/reference/stockbarsingle-1.md
+- [Latest bar (single symbol)](./reference/stocklatestbarsingle-1.md): https://docs.alpaca.markets/us/reference/stocklatestbarsingle-1.md
+- [Historical quotes (single symbol)](./reference/stockquotesingle-1.md): https://docs.alpaca.markets/us/reference/stockquotesingle-1.md
+- [Latest quote (single symbol)](./reference/stocklatestquotesingle-1.md): https://docs.alpaca.markets/us/reference/stocklatestquotesingle-1.md
+- [Snapshot (single symbol)](./reference/stocksnapshotsingle.md): https://docs.alpaca.markets/us/reference/stocksnapshotsingle.md
+- [Historical trades (single symbol)](./reference/stocktradesingle-1.md): https://docs.alpaca.markets/us/reference/stocktradesingle-1.md
+- [Latest trade (single symbol)](./reference/stocklatesttradesingle-1.md): https://docs.alpaca.markets/us/reference/stocklatesttradesingle-1.md
+- [Historical bars](./reference/optionbars.md): https://docs.alpaca.markets/us/reference/optionbars.md
+- [Condition codes](./reference/optionmetaconditions.md): https://docs.alpaca.markets/us/reference/optionmetaconditions.md
+- [Exchange codes](./reference/optionmetaexchanges.md): https://docs.alpaca.markets/us/reference/optionmetaexchanges.md
+- [Latest quotes](./reference/optionlatestquotes.md): https://docs.alpaca.markets/us/reference/optionlatestquotes.md
+- [Snapshots](./reference/optionsnapshots.md): https://docs.alpaca.markets/us/reference/optionsnapshots.md
+- [Option chain](./reference/optionchain.md): https://docs.alpaca.markets/us/reference/optionchain.md
+- [Historical trades](./reference/optiontrades.md): https://docs.alpaca.markets/us/reference/optiontrades.md
+- [Latest trades](./reference/optionlatesttrades.md): https://docs.alpaca.markets/us/reference/optionlatesttrades.md
+- [Historical bars](./reference/cryptobars-1.md): https://docs.alpaca.markets/us/reference/cryptobars-1.md
+- [Latest bars](./reference/cryptolatestbars-1.md): https://docs.alpaca.markets/us/reference/cryptolatestbars-1.md
+- [Latest orderbook](./reference/cryptolatestorderbooks-1.md): https://docs.alpaca.markets/us/reference/cryptolatestorderbooks-1.md
+- [Latest quotes](./reference/cryptolatestquotes-1.md): https://docs.alpaca.markets/us/reference/cryptolatestquotes-1.md
+- [Latest trades](./reference/cryptolatesttrades-1.md): https://docs.alpaca.markets/us/reference/cryptolatesttrades-1.md
+- [Historical quotes](./reference/cryptoquotes-1.md): https://docs.alpaca.markets/us/reference/cryptoquotes-1.md
+- [Snapshots](./reference/cryptosnapshots-1.md): https://docs.alpaca.markets/us/reference/cryptosnapshots-1.md
+- [Historical trades](./reference/cryptotrades-1.md): https://docs.alpaca.markets/us/reference/cryptotrades-1.md
+- [Latest prices](./reference/fixedincomelatestprices.md): https://docs.alpaca.markets/us/reference/fixedincomelatestprices.md
+- [Latest quotes](./reference/fixedincomelatestquotes.md): https://docs.alpaca.markets/us/reference/fixedincomelatestquotes.md
+- [Latest rates for currency pairs](./reference/latestrates-1.md): https://docs.alpaca.markets/us/reference/latestrates-1.md
+- [Historical rates for currency pairs](./reference/rates-1.md): https://docs.alpaca.markets/us/reference/rates-1.md
+- [Logos](./reference/logos-5.md): https://docs.alpaca.markets/us/reference/logos-5.md
+- [Most active stocks](./reference/mostactives-1.md): https://docs.alpaca.markets/us/reference/mostactives-1.md
+- [Top market movers](./reference/movers-1.md): https://docs.alpaca.markets/us/reference/movers-1.md
+- [News articles](./reference/news-3.md): https://docs.alpaca.markets/us/reference/news-3.md
+- [Corporate actions](./reference/corporateactions-1.md): https://docs.alpaca.markets/us/reference/corporateactions-1.md
+- [Subscribe to Corporate Actions Events (SSE)](./reference/subscribetocorporateactionseventssse.md): https://docs.alpaca.markets/us/reference/subscribetocorporateactionseventssse.md
+- [Get All Accounts](./reference/getallaccounts.md): https://docs.alpaca.markets/us/reference/getallaccounts.md
+- [Create an Account](./reference/createaccount.md): https://docs.alpaca.markets/us/reference/createaccount.md
+- [Get An Account by ID](./reference/getaccount.md): https://docs.alpaca.markets/us/reference/getaccount.md
+- [Update an Account](./reference/patchaccount.md): https://docs.alpaca.markets/us/reference/patchaccount.md
+- [Request options trading for an account (BETA)](./reference/requestoptionsforaccount.md): https://docs.alpaca.markets/us/reference/requestoptionsforaccount.md
+- [Retrieve options level approval requests (BETA)](./reference/requestlistoptionsapprovals.md): https://docs.alpaca.markets/us/reference/requestlistoptionsapprovals.md
+- [Retrieve Account Activities](./reference/getaccountactivities.md): https://docs.alpaca.markets/us/reference/getaccountactivities.md
+- [Retrieve Account Activities of Specific Type](./reference/getaccountactivitiesbytype.md): https://docs.alpaca.markets/us/reference/getaccountactivitiesbytype.md
+- [Retrieve Trading Details for an Account](./reference/gettradingaccount.md): https://docs.alpaca.markets/us/reference/gettradingaccount.md
+- [Close an Account](./reference/post-v1-accounts-account_id-actions-close.md): https://docs.alpaca.markets/us/reference/post-v1-accounts-account_id-actions-close.md
+- [Get a single activity (V2) event by event_id ULID.](./reference/getaccountactivityevent.md): https://docs.alpaca.markets/us/reference/getaccountactivityevent.md
+- [Retrieve a List of Account Documents](./reference/getdocsforaccount.md): https://docs.alpaca.markets/us/reference/getdocsforaccount.md
+- [Upload Owner Documents for an Existing Account](./reference/uploaddoctoaccount.md): https://docs.alpaca.markets/us/reference/uploaddoctoaccount.md
+- [Download an Account Document](./reference/downloaddocfromaccount.md): https://docs.alpaca.markets/us/reference/downloaddocfromaccount.md
+- [Download the W8BEN document for the primary owner of an account](./reference/get-v1-accounts-account_id-documents-w8ben-document_id-download.md): https://docs.alpaca.markets/us/reference/get-v1-accounts-account_id-documents-w8ben-document_id-download.md
+- [List Open Positions for an Account](./reference/getpositionsforaccount.md): https://docs.alpaca.markets/us/reference/getpositionsforaccount.md
+- [Close All Positions for an Account](./reference/closeallpositionsforaccount.md): https://docs.alpaca.markets/us/reference/closeallpositionsforaccount.md
+- [Get an Open Position for account by Symbol or AssetId](./reference/getpositionsforaccountbysymbol.md): https://docs.alpaca.markets/us/reference/getpositionsforaccountbysymbol.md
+- [Close a Position for an Account](./reference/closepositionforaccountbysymbol.md): https://docs.alpaca.markets/us/reference/closepositionforaccountbysymbol.md
+- [Exercise an Options Position](./reference/optionexercise-1.md): https://docs.alpaca.markets/us/reference/optionexercise-1.md
+- [Do Not Exercise an Options Position](./reference/optiondonotexercise-1.md): https://docs.alpaca.markets/us/reference/optiondonotexercise-1.md
+- [Retrieve an Order by its ID](./reference/getorderforaccount.md): https://docs.alpaca.markets/us/reference/getorderforaccount.md
+- [Replace an Order](./reference/replaceorderforaccount.md): https://docs.alpaca.markets/us/reference/replaceorderforaccount.md
+- [Cancel an Open Order](./reference/deleteorderforaccount.md): https://docs.alpaca.markets/us/reference/deleteorderforaccount.md
+- [Retrieve a List of Orders](./reference/getallordersforaccount.md): https://docs.alpaca.markets/us/reference/getallordersforaccount.md
+- [Retrieves a single order specified by the client order ID.](./reference/getorderbyclientorderidforaccount.md): https://docs.alpaca.markets/us/reference/getorderbyclientorderidforaccount.md
+- [Create an Order for an Account](./reference/createorderforaccount.md): https://docs.alpaca.markets/us/reference/createorderforaccount.md
+- [Cancel all Open Orders For an Account](./reference/deleteallordersforaccount.md): https://docs.alpaca.markets/us/reference/deleteallordersforaccount.md
+- [Estimate an Order](./reference/get-v1-trading-accounts-account_id-orders-estimation.md): https://docs.alpaca.markets/us/reference/get-v1-trading-accounts-account_id-orders-estimation.md
+- [Bulk Fetch All Accounts Positions](./reference/get-v1-accounts-positions.md): https://docs.alpaca.markets/us/reference/get-v1-accounts-positions.md
+- [Update Trading Configurations for an Account](./reference/patch-patch-v1-trading-accounts-account_id-account-configurations.md): https://docs.alpaca.markets/us/reference/patch-patch-v1-trading-accounts-account_id-account-configurations.md
+- [Retrieve real-time Trading Limits for an Account](./reference/get-v1-account-trading-limits.md): https://docs.alpaca.markets/us/reference/get-v1-account-trading-limits.md
+- [Get Account Portfolio History](./reference/get-v1-trading-accounts-account_id-account-portfolio-history.md): https://docs.alpaca.markets/us/reference/get-v1-trading-accounts-account_id-account-portfolio-history.md
+- [Retrieve All Assets](./reference/getassets.md): https://docs.alpaca.markets/us/reference/getassets.md
+- [Retrieve an Asset by ID](./reference/getassetbysymbolorid.md): https://docs.alpaca.markets/us/reference/getassetbysymbolorid.md
+- [Retrieve Entry Requirements for requested assets](./reference/get-asset-entry-requirements.md): https://docs.alpaca.markets/us/reference/get-asset-entry-requirements.md
+- [Get Option Contracts (BETA)](./reference/get-options-contracts-1.md): https://docs.alpaca.markets/us/reference/get-options-contracts-1.md
+- [Get an option contract by ID or Symbol (BETA)](./reference/get-option-contract-symbol_or_id-1.md): https://docs.alpaca.markets/us/reference/get-option-contract-symbol_or_id-1.md
+- [Get US treasuries](./reference/ustreasuries-1.md): https://docs.alpaca.markets/us/reference/ustreasuries-1.md
+- [Get US corporates](./reference/uscorporates-1.md): https://docs.alpaca.markets/us/reference/uscorporates-1.md
+- [Get US Market Calendar](./reference/legacycalendar-1.md): https://docs.alpaca.markets/us/reference/legacycalendar-1.md
+- [Get Market Calendar](./reference/calendar-6.md): https://docs.alpaca.markets/us/reference/calendar-6.md
+- [Get US Market Clock](./reference/legacyclock-1.md): https://docs.alpaca.markets/us/reference/legacyclock-1.md
+- [Get Market Clock](./reference/clock-2.md): https://docs.alpaca.markets/us/reference/clock-2.md
+- [Subscribe to Account Status Events (SSE)](./reference/suscribetoaccountstatussse.md): https://docs.alpaca.markets/us/reference/suscribetoaccountstatussse.md
+- [Subscribe to Journal Events (SSE) (Legacy)](./reference/subscribetojournalstatussse.md): https://docs.alpaca.markets/us/reference/subscribetojournalstatussse.md
+- [Subscribe to Journal Events (SSE)](./reference/subscribetojournalstatusv2sse.md): https://docs.alpaca.markets/us/reference/subscribetojournalstatusv2sse.md
+- [Subscribe to Transfer Events (SSE) (Legacy)](./reference/subscribetotransferstatussse.md): https://docs.alpaca.markets/us/reference/subscribetotransferstatussse.md
+- [Subscribe to Trade Events (SSE)](./reference/subscribetotradev2sse.md): https://docs.alpaca.markets/us/reference/subscribetotradev2sse.md
+- [Subscribe to Admin Action Events (SSE)](./reference/subscribetoadminactionsse.md): https://docs.alpaca.markets/us/reference/subscribetoadminactionsse.md
+- [Subscribe to Non-Trading Activities Events (SSE)](./reference/get-v1-events-nta.md): https://docs.alpaca.markets/us/reference/get-v1-events-nta.md
+- [Subscribe to Funding Status Events (SSE)](./reference/subscribetofundingstatussse.md): https://docs.alpaca.markets/us/reference/subscribetofundingstatussse.md
+- [Subscribe to System Events (SSE)](./reference/subscribetosystemeventv2sse.md): https://docs.alpaca.markets/us/reference/subscribetosystemeventv2sse.md
+- [Subscribe to Activity Events (SSE)](./reference/subscribetoactivitiessse-1.md): https://docs.alpaca.markets/us/reference/subscribetoactivitiessse-1.md
+- [Subscribe to IPO Events (SSE)](./reference/subscribetoipoeventssse.md): https://docs.alpaca.markets/us/reference/subscribetoipoeventssse.md
+- [Retrieve Bank Relationships for an Account](./reference/getrecipientbanks.md): https://docs.alpaca.markets/us/reference/getrecipientbanks.md
+- [Create a Bank Relationship for an Account](./reference/createrecipientbank.md): https://docs.alpaca.markets/us/reference/createrecipientbank.md
+- [Delete a Bank Relationship for an Account](./reference/deleterecipientbank.md): https://docs.alpaca.markets/us/reference/deleterecipientbank.md
+- [Retrieve List of Transfers for an Account.](./reference/gettransfersforaccount.md): https://docs.alpaca.markets/us/reference/gettransfersforaccount.md
+- [Request a New Transfer](./reference/createtransferforaccount.md): https://docs.alpaca.markets/us/reference/createtransferforaccount.md
+- [Request to Close a Transfer](./reference/deletetransfer.md): https://docs.alpaca.markets/us/reference/deletetransfer.md
+- [Retrieve ACH Relationships for an account](./reference/getaccountachrelationships.md): https://docs.alpaca.markets/us/reference/getaccountachrelationships.md
+- [Create an ACH Relationship](./reference/createachrelationshipforaccount.md): https://docs.alpaca.markets/us/reference/createachrelationshipforaccount.md
+- [Delete an existing ACH relationship](./reference/deleteachrelationshipfromaccount.md): https://docs.alpaca.markets/us/reference/deleteachrelationshipfromaccount.md
+- [Retrieve JIT Reports](./reference/get-v1-transfers-jit-reports.md): https://docs.alpaca.markets/us/reference/get-v1-transfers-jit-reports.md
+- [Retrieve Daily Trading Limits](./reference/get-v1-transfers-jit-limits.md): https://docs.alpaca.markets/us/reference/get-v1-transfers-jit-limits.md
+- [Retrieve JIT Ledgers](./reference/get-v1-transfers-jit-ledgers.md): https://docs.alpaca.markets/us/reference/get-v1-transfers-jit-ledgers.md
+- [Retrieve JIT Ledger Balances](./reference/get-v1-transfers-jit-ledger_id-balances.md): https://docs.alpaca.markets/us/reference/get-v1-transfers-jit-ledger_id-balances.md
+- [List all JIT Settlements](./reference/get-v1-jit-settlements.md): https://docs.alpaca.markets/us/reference/get-v1-jit-settlements.md
+- [Create a new JIT settlement](./reference/post-v1-jit-settlements.md): https://docs.alpaca.markets/us/reference/post-v1-jit-settlements.md
+- [Get a single JIT settlement](./reference/get-v1-jit-settlements-single.md): https://docs.alpaca.markets/us/reference/get-v1-jit-settlements-single.md
+- [Create sandbox deposit transfer](./reference/demodepositfunding.md): https://docs.alpaca.markets/us/reference/demodepositfunding.md
+- [Batch create funding wallets](./reference/batchcreatefundingwallets.md): https://docs.alpaca.markets/us/reference/batchcreatefundingwallets.md
+- [Retrieve funding wallet](./reference/getfundingwallet.md): https://docs.alpaca.markets/us/reference/getfundingwallet.md
+- [Creates a funding wallet](./reference/createfundingwallet.md): https://docs.alpaca.markets/us/reference/createfundingwallet.md
+- [Retrieve funding details](./reference/listfundingdetails.md): https://docs.alpaca.markets/us/reference/listfundingdetails.md
+- [Retrieve funding wallet transfers](./reference/getfundingwallettransfers.md): https://docs.alpaca.markets/us/reference/getfundingwallettransfers.md
+- [Retrieve funding wallet transfer by ID](./reference/getfundingwallettransferbyid.md): https://docs.alpaca.markets/us/reference/getfundingwallettransferbyid.md
+- [Retrieve recipient bank](./reference/getfundingwalletrecipientbank.md): https://docs.alpaca.markets/us/reference/getfundingwalletrecipientbank.md
+- [Create a recipient bank](./reference/createfundingwalletrecipientbank.md): https://docs.alpaca.markets/us/reference/createfundingwalletrecipientbank.md
+- [Delete a recipient bank](./reference/deletefundingwalletrecipientbank.md): https://docs.alpaca.markets/us/reference/deletefundingwalletrecipientbank.md
+- [Create a withdrawal](./reference/createfundingwalletwithdrawal.md): https://docs.alpaca.markets/us/reference/createfundingwalletwithdrawal.md
+- [Get Instant Funding List](./reference/get-v1-instant-funding-list.md): https://docs.alpaca.markets/us/reference/get-v1-instant-funding-list.md
+- [Create an instant funding request](./reference/post-v1-instant-funding.md): https://docs.alpaca.markets/us/reference/post-v1-instant-funding.md
+- [Get an instant funding request](./reference/get-v1-instant-funding-single.md): https://docs.alpaca.markets/us/reference/get-v1-instant-funding-single.md
+- [Cancel an instant funding request](./reference/delete-v1-instant-funding-single.md): https://docs.alpaca.markets/us/reference/delete-v1-instant-funding-single.md
+- [List settlements](./reference/get-v1-instant-funding-settlements.md): https://docs.alpaca.markets/us/reference/get-v1-instant-funding-settlements.md
+- [Create a new settlement](./reference/post-v1-instant-funding-settlements.md): https://docs.alpaca.markets/us/reference/post-v1-instant-funding-settlements.md
+- [Get a single settlement](./reference/get-v1-instant-funding-settlements-single.md): https://docs.alpaca.markets/us/reference/get-v1-instant-funding-settlements-single.md
+- [Get instant funding limits](./reference/get-v1-instant-funding-correspondent-limits.md): https://docs.alpaca.markets/us/reference/get-v1-instant-funding-correspondent-limits.md
+- [Get instant funding account limits](./reference/get-v1-instant-funding-account-limits.md): https://docs.alpaca.markets/us/reference/get-v1-instant-funding-account-limits.md
+- [Get instant funding report](./reference/get-v1-instant-funding-reports.md): https://docs.alpaca.markets/us/reference/get-v1-instant-funding-reports.md
+- [Get an OAuth client](./reference/getoauthclient.md): https://docs.alpaca.markets/us/reference/getoauthclient.md
+- [Issue an OAuth token](./reference/issueoauthtoken.md): https://docs.alpaca.markets/us/reference/issueoauthtoken.md
+- [Authorize an OAuth Token](./reference/authorizeoauthtoken.md): https://docs.alpaca.markets/us/reference/authorizeoauthtoken.md
+- [Retrieve a List Journals](./reference/getalljournals.md): https://docs.alpaca.markets/us/reference/getalljournals.md
+- [Create a Journal](./reference/createjournal.md): https://docs.alpaca.markets/us/reference/createjournal.md
+- [Cancel a Pending Journal](./reference/deletejournalbyid.md): https://docs.alpaca.markets/us/reference/deletejournalbyid.md
+- [Retrieve a Single Journal Entry](./reference/get-v1-journals-journal_id.md): https://docs.alpaca.markets/us/reference/get-v1-journals-journal_id.md
+- [Create a Batch Journal Transaction (One-to-Many)](./reference/createbatchjournal.md): https://docs.alpaca.markets/us/reference/createbatchjournal.md
+- [Create a Reverse Batch Journal Transaction (Many-to-One)](./reference/post-v1-journals-reverse_batch.md): https://docs.alpaca.markets/us/reference/post-v1-journals-reverse_batch.md
+- [Retrieve Announcements](./reference/getcorporateannouncements.md): https://docs.alpaca.markets/us/reference/getcorporateannouncements.md
+- [Retrieve a Specific Announcement](./reference/get-get-v1-corporate_actions-announcements-id.md): https://docs.alpaca.markets/us/reference/get-get-v1-corporate_actions-announcements-id.md
+- [Retrieve all Watchlists for an Account](./reference/getallwatchlistsforaccount.md): https://docs.alpaca.markets/us/reference/getallwatchlistsforaccount.md
+- [Create a New Watchlist for an Account](./reference/createwatchlistforaccount.md): https://docs.alpaca.markets/us/reference/createwatchlistforaccount.md
+- [Manage watchlists](./reference/getwatchlistforaccountbyid.md): https://docs.alpaca.markets/us/reference/getwatchlistforaccountbyid.md
+- [Update a Watchlist](./reference/replacewatchlistforaccountbyid.md): https://docs.alpaca.markets/us/reference/replacewatchlistforaccountbyid.md
+- [Remove a Watchlist](./reference/deletewatchlistfromaccountbyid.md): https://docs.alpaca.markets/us/reference/deletewatchlistfromaccountbyid.md
+- [Add an Asset to a Watchlist](./reference/post-v1-trading-accounts-account_id-watchlists-watchlist_id.md): https://docs.alpaca.markets/us/reference/post-v1-trading-accounts-account_id-watchlists-watchlist_id.md
+- [Remove a Symbol from a Watchlist](./reference/delete-delete-v1-trading-accounts-account_id-watchlists-watchlist_id-symbol.md): https://docs.alpaca.markets/us/reference/delete-delete-v1-trading-accounts-account_id-watchlists-watchlist_id-symbol.md
+- [Upload CIP information](./reference/post-v1-accounts-account_id-cip.md): https://docs.alpaca.markets/us/reference/post-v1-accounts-account_id-cip.md
+- [Retrieve CIP information](./reference/get-v1-accounts-account_id-cip.md): https://docs.alpaca.markets/us/reference/get-v1-accounts-account_id-cip.md
+- [Retrieve an Onfido SDK Token](./reference/get-v1-accounts-account_id-onfido-sdk-tokens.md): https://docs.alpaca.markets/us/reference/get-v1-accounts-account_id-onfido-sdk-tokens.md
+- [Update the Onfido SDK Outcome](./reference/patch-v1-accounts-account_id-onfido-sdk.md): https://docs.alpaca.markets/us/reference/patch-v1-accounts-account_id-onfido-sdk.md
+- [List Portfolios](./reference/get-v1-rebalancing-portfolios.md): https://docs.alpaca.markets/us/reference/get-v1-rebalancing-portfolios.md
+- [Create Portfolio](./reference/post-v1-rebalancing-portfolios.md): https://docs.alpaca.markets/us/reference/post-v1-rebalancing-portfolios.md
+- [Get Portfolio by ID](./reference/get-v1-rebalancing-portfolios-portfolio_id.md): https://docs.alpaca.markets/us/reference/get-v1-rebalancing-portfolios-portfolio_id.md
+- [Update Portfolio by ID](./reference/patch-v1-rebalancing-portfolios-portfolio_id.md): https://docs.alpaca.markets/us/reference/patch-v1-rebalancing-portfolios-portfolio_id.md
+- [Inactivate Portfolio By ID](./reference/delete-v1-rebalancing-portfolios-portfolio_id.md): https://docs.alpaca.markets/us/reference/delete-v1-rebalancing-portfolios-portfolio_id.md
+- [List All Subscriptions](./reference/get-v1-rebalancing-subscriptions.md): https://docs.alpaca.markets/us/reference/get-v1-rebalancing-subscriptions.md
+- [Create Subscription](./reference/post-v1-rebalancing-subscriptions.md): https://docs.alpaca.markets/us/reference/post-v1-rebalancing-subscriptions.md
+- [Get Subscription by ID](./reference/get-v1-rebalancing-subscriptions-subscription_id.md): https://docs.alpaca.markets/us/reference/get-v1-rebalancing-subscriptions-subscription_id.md
+- [Unsubscribe Account (Delete Subscription)](./reference/delete-v1-rebalancing-subscriptions-subscription_id.md): https://docs.alpaca.markets/us/reference/delete-v1-rebalancing-subscriptions-subscription_id.md
+- [List All Runs.](./reference/get-v1-rebalancing-runs.md): https://docs.alpaca.markets/us/reference/get-v1-rebalancing-runs.md
+- [Create Run](./reference/post-v1-rebalancing-runs.md): https://docs.alpaca.markets/us/reference/post-v1-rebalancing-runs.md
+- [Get Run by ID](./reference/get-v1-rebalancing-runs-run_id.md): https://docs.alpaca.markets/us/reference/get-v1-rebalancing-runs-run_id.md
+- [Cancel Run by ID](./reference/delete-v1-rebalancing-runs-run_id.md): https://docs.alpaca.markets/us/reference/delete-v1-rebalancing-runs-run_id.md
+- [Get Logo](./reference/get-v1beta1-logos-symbol.md): https://docs.alpaca.markets/us/reference/get-v1beta1-logos-symbol.md
+- [Retrieve Aggregate Positions](./reference/get-v1-reporting-eod-aggregate_positions.md): https://docs.alpaca.markets/us/reference/get-v1-reporting-eod-aggregate_positions.md
+- [Retrieve EOD Positions](./reference/get-v1-reporting-eod-positions.md): https://docs.alpaca.markets/us/reference/get-v1-reporting-eod-positions.md
+- [Retrieve EOD Cash Interest Details](./reference/get-v1-get-eod-cash-interest-report.md): https://docs.alpaca.markets/us/reference/get-v1-get-eod-cash-interest-report.md
+- [Retrieve countries information](./reference/querycountryinfos.md): https://docs.alpaca.markets/us/reference/querycountryinfos.md
+- [Retrieve Crypto Funding Wallets](./reference/listcryptofundingwallets-1.md): https://docs.alpaca.markets/us/reference/listcryptofundingwallets-1.md
+- [Retrieve Crypto Funding Transfers](./reference/listcryptofundingtransfers-1.md): https://docs.alpaca.markets/us/reference/listcryptofundingtransfers-1.md
+- [Request a New Withdrawal](./reference/createcryptotransferforaccount-1.md): https://docs.alpaca.markets/us/reference/createcryptotransferforaccount-1.md
+- [Retrieve a Crypto Funding Transfer](./reference/getcryptofundingtransfer-1.md): https://docs.alpaca.markets/us/reference/getcryptofundingtransfer-1.md
+- [An array of whitelisted addresses](./reference/listwhitelistedaddress-1.md): https://docs.alpaca.markets/us/reference/listwhitelistedaddress-1.md
+- [Request a new whitelisted address](./reference/createwhitelistedaddress-1.md): https://docs.alpaca.markets/us/reference/createwhitelistedaddress-1.md
+- [Delete a whitelisted address](./reference/deletewhitelistedaddress-1.md): https://docs.alpaca.markets/us/reference/deletewhitelistedaddress-1.md
+- [Returns the estimated gas fee for a proposed transaction.](./reference/getcryptotransferestimate-1.md): https://docs.alpaca.markets/us/reference/getcryptotransferestimate-1.md
+- [Update travel rule information for a whitelisted wallet](./reference/updatewhitelistedaddresstravelruleinfo.md): https://docs.alpaca.markets/us/reference/updatewhitelistedaddresstravelruleinfo.md
+- [Search for VASPs](./reference/searchvasps.md): https://docs.alpaca.markets/us/reference/searchvasps.md
+- [Retrieve Excess Contributions](./reference/listiraexcesscontritbutions.md): https://docs.alpaca.markets/us/reference/listiraexcesscontritbutions.md
+- [List APR Tiers](./reference/get-v1-list-apr-tiers.md): https://docs.alpaca.markets/us/reference/get-v1-list-apr-tiers.md
+- [List FPSL Tiers](./reference/get-v1-list-fpsl-tiers.md): https://docs.alpaca.markets/us/reference/get-v1-list-fpsl-tiers.md
+- [List FPSL Loans](./reference/get-v1-list-fpsl-loans.md): https://docs.alpaca.markets/us/reference/get-v1-list-fpsl-loans.md
+- [Read FPSL Loans Analytics for an Account](./reference/get-v1-fpsl-analytics-account-loans.md): https://docs.alpaca.markets/us/reference/get-v1-fpsl-analytics-account-loans.md
+- [Mint a Tokenized Asset](./reference/posttokenizationmintbroker.md): https://docs.alpaca.markets/us/reference/posttokenizationmintbroker.md
+- [Redeem a Tokenized Asset](./reference/posttokenizationredeem.md): https://docs.alpaca.markets/us/reference/posttokenizationredeem.md
+- [List Tokenization Requests](./reference/gettokenizationrequestsbroker.md): https://docs.alpaca.markets/us/reference/gettokenizationrequestsbroker.md
+- [Confirm Tokenized Asset Minted](./reference/posttokenizationcallbackmint.md): https://docs.alpaca.markets/us/reference/posttokenizationcallbackmint.md
+- [Get Tokenization Request by ID](./reference/gettokenizationrequestbyidbroker.md): https://docs.alpaca.markets/us/reference/gettokenizationrequestbyidbroker.md
+- [Get Tokenization Request by `client_request_id`](./reference/gettokenizationrequestbyclientrequestidbroker.md): https://docs.alpaca.markets/us/reference/gettokenizationrequestbyclientrequestidbroker.md
+- [Get Tokenization Request by `issuer_request_id`](./reference/gettokenizationrequestbyissuerrequestidbroker.md): https://docs.alpaca.markets/us/reference/gettokenizationrequestbyissuerrequestidbroker.md
+- [List transfers](./reference/listacatstransfers.md): https://docs.alpaca.markets/us/reference/listacatstransfers.md
+- [List transfers for an account](./reference/listacatstransfersbyaccount.md): https://docs.alpaca.markets/us/reference/listacatstransfersbyaccount.md
+- [Initiate an incoming transfer](./reference/requestacatstransfer.md): https://docs.alpaca.markets/us/reference/requestacatstransfer.md
+- [Get transfer details](./reference/getacatstransfer.md): https://docs.alpaca.markets/us/reference/getacatstransfer.md
+- [List assets for a transfer](./reference/listacatsassets.md): https://docs.alpaca.markets/us/reference/listacatsassets.md
+- [List contra brokers](./reference/listacatscontrabrokers.md): https://docs.alpaca.markets/us/reference/listacatscontrabrokers.md
+- [List IPO Offerings](./reference/listipoofferings.md): https://docs.alpaca.markets/us/reference/listipoofferings.md
+- [Retrieve an IPO Offering](./reference/getipooffering.md): https://docs.alpaca.markets/us/reference/getipooffering.md
+
+### 4. Guides & Architecture (开发指南与架构)
+- [Welcome](./guides/getting-started.md): https://docs.alpaca.markets/us/docs/getting-started.md
+- [About Alpaca](./guides/about-alpaca.md): https://docs.alpaca.markets/us/docs/about-alpaca.md
+- [Alpaca API Platform](./guides/alpaca-api-platform.md): https://docs.alpaca.markets/us/docs/alpaca-api-platform.md
+- [Authentication](./guides/authentication.md): https://docs.alpaca.markets/us/docs/authentication.md
+- [SDKs and Tools](./guides/sdks-and-tools.md): https://docs.alpaca.markets/us/docs/sdks-and-tools.md
+- [Additional Resources](./guides/additional-resources.md): https://docs.alpaca.markets/us/docs/additional-resources.md
+- [Trading CLI](./guides/alpacas-cli.md): https://docs.alpaca.markets/us/docs/alpacas-cli.md
+- [Trading MCP Server](./guides/alpaca-mcp-server.md): https://docs.alpaca.markets/us/docs/alpaca-mcp-server.md
+- [Broker MCP Server](./guides/broker-mcp-server.md): https://docs.alpaca.markets/us/docs/broker-mcp-server.md
+- [About Broker API](./guides/about-broker-api.md): https://docs.alpaca.markets/us/docs/about-broker-api.md
+- [Getting Started with Broker API](./guides/getting-started-with-broker-api.md): https://docs.alpaca.markets/us/docs/getting-started-with-broker-api.md
+- [Credentials Management](./guides/credential-management.md): https://docs.alpaca.markets/us/docs/credential-management.md
+- [Use Cases](./guides/use-cases.md): https://docs.alpaca.markets/us/docs/use-cases.md
+- [Integration Setup with Alpaca](./guides/integration-setup-with-alpaca.md): https://docs.alpaca.markets/us/docs/integration-setup-with-alpaca.md
+- [Broker API FAQs](./guides/broker-api-faq.md): https://docs.alpaca.markets/us/docs/broker-api-faq.md
+- [FDIC Sweep Program](./guides/fdic-sweep-program.md): https://docs.alpaca.markets/us/docs/fdic-sweep-program.md
+- [Instant Funding](./guides/instant-funding-1.md): https://docs.alpaca.markets/us/docs/instant-funding-1.md
+- [Fully Paid Securities Lending (FPSL)](./guides/fully-paid-securities-lending.md): https://docs.alpaca.markets/us/docs/fully-paid-securities-lending.md
+- [OmniSub](./guides/omnisub.md): https://docs.alpaca.markets/us/docs/omnisub.md
+- [Fixed Income](./guides/fixed-income.md): https://docs.alpaca.markets/us/docs/fixed-income.md
+- [ACATS API](./guides/acats-api.md): https://docs.alpaca.markets/us/docs/acats-api.md
+- [US IPOs (Initial Public Offerings)](./guides/us-ipos-initial-public-offerings.md): https://docs.alpaca.markets/us/docs/us-ipos-initial-public-offerings.md
+- [Data Validations](./guides/data-validations.md): https://docs.alpaca.markets/us/docs/data-validations.md
+- [Crypto Wallets API](./guides/crypto-wallets-api.md): https://docs.alpaca.markets/us/docs/crypto-wallets-api.md
+- [Journals API](./guides/funding-via-journals.md): https://docs.alpaca.markets/us/docs/funding-via-journals.md
+- [Funding Wallets](./guides/funding-wallets.md): https://docs.alpaca.markets/us/docs/funding-wallets.md
+- [ACH Funding](./guides/ach-funding.md): https://docs.alpaca.markets/us/docs/ach-funding.md
+- [Instant Funding](./guides/instant-funding.md): https://docs.alpaca.markets/us/docs/instant-funding.md
+- [Fully Paid Securities Lending (FPSL)](./guides/integrating-with-fully-paid-securitie-lending-fpsl-for-fully-disclosed.md): https://docs.alpaca.markets/us/docs/integrating-with-fully-paid-securitie-lending-fpsl-for-fully-disclosed.md
+- [FPSL Integration Guide for Fully Disclosed](./guides/fpsl-integration-guide-for-fully-disclosed.md): https://docs.alpaca.markets/us/docs/fpsl-integration-guide-for-fully-disclosed.md
+- [FPSL Integration Guide for OmniSub](./guides/fpsl-integration-guide-for-omnisub.md): https://docs.alpaca.markets/us/docs/fpsl-integration-guide-for-omnisub.md
+- [SSE Events](./guides/sse-events.md): https://docs.alpaca.markets/us/docs/sse-events.md
+- [Activities](./guides/activity-sse.md): https://docs.alpaca.markets/us/docs/activity-sse.md
+- [Daily Processes and Reconcilations](./guides/daily-processes-and-reconcilations.md): https://docs.alpaca.markets/us/docs/daily-processes-and-reconcilations.md
+- [Banking Holiday Funding Processes](./guides/holiday-funding-processes.md): https://docs.alpaca.markets/us/docs/holiday-funding-processes.md
+- [Statements and Confirms](./guides/statements-and-confirms.md): https://docs.alpaca.markets/us/docs/statements-and-confirms.md
+- [Index Options](./guides/index-options.md): https://docs.alpaca.markets/us/docs/index-options.md
+- [Fixed Income](./guides/fixed-income-1.md): https://docs.alpaca.markets/us/docs/fixed-income-1.md
+- [Tokenization Guide for Issuer](./guides/tokenization-guide-for-issuer.md): https://docs.alpaca.markets/us/docs/tokenization-guide-for-issuer.md
+- [Tokenization Guide for Authorized Participant](./guides/tokenization-guide-for-authorized-participant.md): https://docs.alpaca.markets/us/docs/tokenization-guide-for-authorized-participant.md
+- [US IPOs (Initial Public Offerings)](./guides/us-ipos-initial-public-offerings-1.md): https://docs.alpaca.markets/us/docs/us-ipos-initial-public-offerings-1.md
+- [Rate Limits](./guides/broker-api-rate-limits.md): https://docs.alpaca.markets/us/docs/broker-api-rate-limits.md
+- [Crypto Spot Trading Fees](./guides/crypto-fees.md): https://docs.alpaca.markets/us/docs/crypto-fees.md
+- [DMA Gateway / Advanced Order Types](./guides/alpaca-elite-smart-router.md): https://docs.alpaca.markets/us/docs/alpaca-elite-smart-router.md
+- [User Protection](./guides/user-protection.md): https://docs.alpaca.markets/us/docs/user-protection.md
+- [Websocket Streaming](./guides/websocket-streaming.md): https://docs.alpaca.markets/us/docs/websocket-streaming.md
+- [Regulatory Fees](./guides/regulatory-fees.md): https://docs.alpaca.markets/us/docs/regulatory-fees.md
+- [Historical API](./guides/historical-api.md): https://docs.alpaca.markets/us/docs/historical-api.md
+- [Historical Crypto Data](./guides/historical-crypto-data-1.md): https://docs.alpaca.markets/us/docs/historical-crypto-data-1.md
+- [Historical Option Data](./guides/historical-option-data.md): https://docs.alpaca.markets/us/docs/historical-option-data.md
+- [Real-time Option Data](./guides/real-time-option-data.md): https://docs.alpaca.markets/us/docs/real-time-option-data.md
+- [About Connect API](./guides/about-connect-api.md): https://docs.alpaca.markets/us/docs/about-connect-api.md
+- [Registering Your App](./guides/registering-your-app.md): https://docs.alpaca.markets/us/docs/registering-your-app.md
+- [About FIX API](./guides/5f36ea05-b1b4-5fd1-91b5-ef51db361a4b.md): https://docs.alpaca.markets/us/docs/5f36ea05-b1b4-5fd1-91b5-ef51db361a4b.md
+- [FIX Specification](./guides/fix-messages.md): https://docs.alpaca.markets/us/docs/fix-messages.md
+- [CUSIP length constraints corrected on fixed income assets](./guides/2026-09-23-cusip-length-ff53e0d.md): https://docs.alpaca.markets/us/changelog/2026-09-23-cusip-length-ff53e0d.md
+- [New "ppind" field on the option contract schema](./guides/2026-09-23-ppind-a4c2141.md): https://docs.alpaca.markets/us/changelog/2026-09-23-ppind-a4c2141.md
+- [New "interest_type", "order_id", and "parent_id" on fixed income interest activities](./guides/2026-09-22-fixed-income-interest-9870a1c.md): https://docs.alpaca.markets/us/changelog/2026-09-22-fixed-income-interest-9870a1c.md
+- [New "tax_rate" and "tax_country" fields on DIVNRA activities](./guides/2026-09-22-divnra-tax-54a0d5f.md): https://docs.alpaca.markets/us/changelog/2026-09-22-divnra-tax-54a0d5f.md
+- [New "ondo" issuer and "hypercore" network for tokenization](./guides/2026-09-22-tokenization-enums-0d51c13.md): https://docs.alpaca.markets/us/changelog/2026-09-22-tokenization-enums-0d51c13.md
+- [New "total_amount" field on funding wallet transfers](./guides/2026-09-21-total-amount-e615dcb.md): https://docs.alpaca.markets/us/changelog/2026-09-21-total-amount-e615dcb.md
+- [New "DIV.ROC" option corporate action activity sub-type](./guides/2026-09-18-opca-roc-da0c03b.md): https://docs.alpaca.markets/us/changelog/2026-09-18-opca-roc-da0c03b.md
+- [Identity schema corrected for income bounds and "tax_id_type"](./guides/2026-09-17-identity-schema-9f16422.md): https://docs.alpaca.markets/us/changelog/2026-09-17-identity-schema-9f16422.md
+- [JNLC upgrade](./guides/jnlc-v2-upgrade.md): https://docs.alpaca.markets/us/changelog/jnlc-v2-upgrade.md
+- [New "robinhood" value on the tokenization network enum](./guides/2026-09-14-robinhood-network-5e61229.md): https://docs.alpaca.markets/us/changelog/2026-09-14-robinhood-network-5e61229.md

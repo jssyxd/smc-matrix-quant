@@ -1,0 +1,932 @@
+# Replace Order by ID
+
+Source: https://docs.alpaca.markets/us/reference/patchorderbyorderid-1.md
+
+---
+updatedAt: 2026-05-27T17:58:22.000Z
+---
+
+Fetch the complete documentation index at: https://docs.alpaca.markets/us/llms.txt. Use this file to discover all available pages before exploring further. Append .md to any documentation page URL to get its markdown version.
+
+# Replace Order by ID
+
+Replaces a single order with updated parameters. Each parameter overrides the corresponding attribute of the existing order. The other attributes remain the same as the existing order.
+
+A success return code from a replaced order does NOT guarantee the existing open order has been replaced. If the existing open order is filled before the replacing (new) order reaches the execution venue, the replacing (new) order is rejected, and these events are sent in the trade_updates stream channel.
+
+While an order is being replaced, buying power is reduced by the larger of the two orders that have been placed (the old order being replaced, and the newly placed order to replace it). If you are replacing a buy entry order with a higher limit price than the original order, the buying power is calculated based on the newly placed order. If you are replacing it with a lower limit price, the buying power is calculated based on the old order.
+
+Note: Order cannot be replaced when the status is `accepted`, `pending_new`, `pending_cancel` or `pending_replace`.
+
+Note: Notional orders for non-IPO asset classes cannot be replaced. Any attempt to modify a non-IPO notional order via this endpoint will be rejected; cancel it and submit a new one instead.
+
+Note: IPO indications of interest (`asset_class: "ipo"`) **are** notional and **can** be replaced via this endpoint by providing a new `notional` value. `qty` and `notional` are mutually exclusive on a single replace request.
+
+
+# OpenAPI definition
+
+```json
+{
+  "components": {
+    "examples": {
+      "EquityOrderResponse": {
+        "value": {
+          "asset_class": "us_equity",
+          "asset_id": "b0b6dd9d-8b9b-48a9-ba46-b9d54906e415",
+          "canceled_at": null,
+          "client_order_id": "5680c4bc-9ac1-4a12-a44c-df427ba53032",
+          "created_at": "2023-12-12T22:31:24.668464435Z",
+          "expired_at": null,
+          "extended_hours": false,
+          "failed_at": null,
+          "filled_at": null,
+          "filled_avg_price": null,
+          "filled_qty": "0",
+          "hwm": null,
+          "id": "7b08df51-c1ac-453c-99f9-323a5f075f0d",
+          "legs": null,
+          "limit_price": "150",
+          "notional": null,
+          "order_class": "",
+          "order_type": "limit",
+          "qty": "2",
+          "replaced_at": null,
+          "replaced_by": null,
+          "replaces": null,
+          "side": "buy",
+          "source": null,
+          "status": "accepted",
+          "stop_price": null,
+          "submitted_at": "2023-12-12T22:31:24.577215743Z",
+          "subtag": null,
+          "symbol": "AAPL",
+          "time_in_force": "gtc",
+          "trail_percent": null,
+          "trail_price": null,
+          "type": "limit",
+          "updated_at": "2023-12-12T22:31:24.668464435Z"
+        }
+      },
+      "IPOOrderResponse": {
+        "value": {
+          "asset_class": "ipo",
+          "asset_id": "9b6c7c1a-9eb2-4d4a-8a3a-1bf4c1d5cbaa",
+          "canceled_at": null,
+          "client_order_id": "0b3a90b6-6b5c-4d83-8c0e-9b3eaf4a8d11",
+          "created_at": "2025-09-15T13:30:42.117344821Z",
+          "expired_at": null,
+          "extended_hours": false,
+          "failed_at": null,
+          "filled_at": null,
+          "filled_avg_price": null,
+          "filled_qty": "0",
+          "hwm": null,
+          "id": "5e2a8f1a-9c10-4d3a-8c64-7f59c1d18c11",
+          "legs": null,
+          "limit_price": null,
+          "notional": "500",
+          "order_class": "",
+          "order_type": "market",
+          "qty": null,
+          "replaced_at": null,
+          "replaced_by": null,
+          "replaces": null,
+          "side": "buy",
+          "source": null,
+          "status": "accepted",
+          "stop_price": null,
+          "submitted_at": "2025-09-15T13:30:42.094518219Z",
+          "subtag": null,
+          "symbol": "FI111225",
+          "time_in_force": "gtc",
+          "trail_percent": null,
+          "trail_price": null,
+          "type": "market",
+          "updated_at": "2025-09-15T13:30:42.117344821Z"
+        }
+      },
+      "OptionOrderResponse": {
+        "value": {
+          "asset_class": "us_option",
+          "asset_id": "98359ef7-5124-49f3-85ea-5cf02df6defa",
+          "canceled_at": null,
+          "client_order_id": "58cd43a7-029e-457e-b77f-cd4f61f00f2a",
+          "created_at": "2023-12-12T21:35:49.102449524Z",
+          "expired_at": null,
+          "extended_hours": false,
+          "failed_at": null,
+          "filled_at": null,
+          "filled_avg_price": null,
+          "filled_qty": "0",
+          "hwm": null,
+          "id": "30a077fa-96f6-4f20-a052-4b921ee2f243",
+          "legs": null,
+          "limit_price": "10",
+          "notional": null,
+          "order_class": "simple",
+          "order_type": "limit",
+          "qty": "2",
+          "replaced_at": null,
+          "replaced_by": null,
+          "replaces": null,
+          "side": "buy",
+          "source": null,
+          "status": "pending_new",
+          "stop_price": null,
+          "submitted_at": "2023-12-12T21:35:49.056332248Z",
+          "subtag": null,
+          "symbol": "AAPL250620C00100000",
+          "time_in_force": "day",
+          "trail_percent": null,
+          "trail_price": null,
+          "type": "limit",
+          "updated_at": "2023-12-12T21:35:49.102504673Z"
+        }
+      }
+    },
+    "schemas": {
+      "AdvancedInstructions": {
+        "description": "Advanced instructions for Elite Smart Router: https://docs.alpaca.markets/docs/alpaca-elite-smart-router",
+        "examples": [
+          {
+            "algorithm": "DMA",
+            "destination": "NYSE",
+            "display_qty": "100"
+          },
+          {
+            "algorithm": "TWAP",
+            "end_time": "2025-07-21T15:30:00-04:00",
+            "max_percentage": "0.314",
+            "start_time": "2025-07-21T09:30:00-04:00"
+          },
+          {
+            "algorithm": "VWAP",
+            "end_time": "2025-07-21T15:30:00-04:00",
+            "max_percentage": "0.314",
+            "start_time": "2025-07-21T09:30:00-04:00"
+          }
+        ],
+        "properties": {
+          "algorithm": {
+            "description": "The advanced routing algorithm to use for the order",
+            "enum": [
+              "DMA",
+              "TWAP",
+              "VWAP"
+            ],
+            "example": "DMA",
+            "type": "string"
+          },
+          "destination": {
+            "description": "Target exchange for order execution",
+            "enum": [
+              "NYSE",
+              "NASDAQ",
+              "ARCA",
+              "IEX",
+              "MEMX"
+            ],
+            "example": "NYSE",
+            "type": "string"
+          },
+          "display_qty": {
+            "description": "Maximum shares/contracts displayed on the exchange at any time. Must be in round lot increments",
+            "example": "100",
+            "format": "decimal",
+            "type": "string"
+          },
+          "end_time": {
+            "description": "When the algorithm is to be done executing. Must be within current market trading hours",
+            "example": "2025-07-21T15:30:00-04:00",
+            "format": "date-time",
+            "type": "string"
+          },
+          "max_percentage": {
+            "description": "Maximum percentage of the ticker's period volume this order might participate in. Must be 0 < max_percentage < 1, with up to 3 decimal points precision.",
+            "example": "0.314",
+            "format": "decimal",
+            "type": "string"
+          },
+          "start_time": {
+            "description": "When the algorithm is to start executing. Must be within current market trading hours",
+            "example": "2025-07-21T09:30:00-04:00",
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "title": "AdvancedInstructions",
+        "type": "object"
+      },
+      "AssetClass": {
+        "description": "This represents the category to which the asset belongs to. It serves to identify the nature of the financial instrument, with options including \"us_equity\" for U.S. equities, \"us_option\" for U.S. options, \"crypto\" for cryptocurrencies, and \"ipo\" for IPO indications of interest/orders. This `asset_class: ipo` value is distinct from the assets API `attributes: [\"ipo\"]` flag.",
+        "enum": [
+          "us_equity",
+          "us_option",
+          "crypto",
+          "crypto_perp",
+          "treasury",
+          "corporate",
+          "global_equity",
+          "us_index",
+          "us_equity_chain",
+          "ipo"
+        ],
+        "example": "us_equity",
+        "examples": [
+          "us_equity"
+        ],
+        "title": "AssetClass",
+        "type": "string"
+      },
+      "Order": {
+        "description": "The Orders API allows a user to monitor, place and cancel their orders with Alpaca.\n\nEach order has a unique identifier provided by the client. This client-side unique order ID will be automatically generated by the system if not provided by the client, and will be returned as part of the order object along with the rest of the fields described below. Once an order is placed, it can be queried using the client-side order ID to check the status.\n\nUpdates on open orders at Alpaca will also be sent over the streaming interface, which is the recommended method of maintaining order state.",
+        "properties": {
+          "asset_class": {
+            "$ref": "#/components/schemas/AssetClass"
+          },
+          "asset_id": {
+            "description": "Asset ID (For options this represents the option contract ID)",
+            "format": "uuid",
+            "type": "string"
+          },
+          "canceled_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "client_order_id": {
+            "description": "Client unique order ID",
+            "maxLength": 128,
+            "type": "string"
+          },
+          "created_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "expired_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "expires_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "extended_hours": {
+            "description": "If true, eligible for execution outside regular trading hours.",
+            "type": "boolean"
+          },
+          "failed_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "filled_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "filled_avg_price": {
+            "description": "Filled average price",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "filled_qty": {
+            "description": "Filled quantity",
+            "minLength": 1,
+            "type": "string"
+          },
+          "hwm": {
+            "description": "The highest (lowest) market price seen since the trailing stop order was submitted.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "Order ID",
+            "format": "uuid",
+            "type": "string"
+          },
+          "legs": {
+            "description": "When querying non-simple order_class orders in a nested style, an array of Order entities associated with this order. Otherwise, null. Required if order class is `mleg`.",
+            "example": null,
+            "items": {
+              "$ref": "#/components/schemas/OrderLeg"
+            },
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "limit_price": {
+            "description": "Limit price",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notional": {
+            "description": "Ordered notional amount. If entered, qty will be null. Can take up to 9 decimal points.",
+            "minLength": 1,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "order_class": {
+            "$ref": "#/components/schemas/OrderClass"
+          },
+          "order_type": {
+            "deprecated": true,
+            "description": "Deprecated in favour of the field \"type\" ",
+            "type": "string"
+          },
+          "position_intent": {
+            "$ref": "#/components/schemas/PositionIntent"
+          },
+          "qty": {
+            "description": "Ordered quantity. If entered, notional will be null. Can take up to 9 decimal points. Required if order class is `mleg`.",
+            "minLength": 1,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ratio_qty": {
+            "description": "The proportional quantity of this leg in relation to the overall multi-leg order quantity.",
+            "format": "decimal",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "replaced_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "replaced_by": {
+            "description": "The order ID that this order was replaced by",
+            "format": "uuid",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "replaces": {
+            "description": "The order ID that this order replaces",
+            "format": "uuid",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "side": {
+            "$ref": "#/components/schemas/OrderSide"
+          },
+          "status": {
+            "$ref": "#/components/schemas/OrderStatus"
+          },
+          "stop_price": {
+            "description": "Stop price",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "submitted_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "symbol": {
+            "description": "Asset symbol, required for all order classes except for `mleg`",
+            "minLength": 1,
+            "type": "string"
+          },
+          "time_in_force": {
+            "$ref": "#/components/schemas/TimeInForce"
+          },
+          "trail_percent": {
+            "description": "The percent value away from the high water mark for trailing stop orders.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "trail_price": {
+            "description": "The dollar value away from the high water mark for trailing stop orders.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "$ref": "#/components/schemas/OrderType"
+          },
+          "updated_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "notional",
+          "type",
+          "time_in_force"
+        ],
+        "title": "Order",
+        "type": "object"
+      },
+      "OrderClass": {
+        "description": "The order classes supported by Alpaca vary based on the order's security type. The following provides a comprehensive breakdown of the supported order classes for each category:\n  - Equity trading: simple (or \"\"), oco, oto, bracket.\n  - Options trading:\n    - simple (or \"\")\n    - mleg (required for multi-leg complex option strategies)\n  - Crypto trading: simple (or \"\").",
+        "enum": [
+          "simple",
+          "bracket",
+          "oco",
+          "oto",
+          "mleg",
+          ""
+        ],
+        "example": "bracket",
+        "title": "OrderClass",
+        "type": "string"
+      },
+      "OrderLeg": {
+        "description": "This is copy of Order response schemas as a workaround of displaying issue of nested Order recursively for legs",
+        "properties": {
+          "asset_class": {
+            "$ref": "#/components/schemas/AssetClass"
+          },
+          "asset_id": {
+            "description": "Asset ID (For options this represents the option contract ID)",
+            "format": "uuid",
+            "type": "string"
+          },
+          "canceled_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "client_order_id": {
+            "description": "Client unique order ID",
+            "maxLength": 128,
+            "type": "string"
+          },
+          "created_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "expired_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "extended_hours": {
+            "description": "If true, eligible for execution outside regular trading hours.",
+            "type": "boolean"
+          },
+          "failed_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "filled_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "filled_avg_price": {
+            "description": "Filled average price",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "filled_qty": {
+            "description": "Filled quantity",
+            "minLength": 1,
+            "type": "string"
+          },
+          "hwm": {
+            "description": "The highest (lowest) market price seen since the trailing stop order was submitted.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "Order ID",
+            "format": "uuid",
+            "type": "string"
+          },
+          "legs": {
+            "description": "Always null for an order leg; legs are not nested beyond one level. An empty array is accepted for generated-client compatibility.",
+            "example": null,
+            "items": {
+              "type": "object"
+            },
+            "maxItems": 0,
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "limit_price": {
+            "description": "Limit price",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notional": {
+            "description": "Ordered notional amount. If entered, qty will be null. Can take up to 9 decimal points.",
+            "minLength": 1,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "order_class": {
+            "$ref": "#/components/schemas/OrderClass"
+          },
+          "order_type": {
+            "deprecated": true,
+            "description": "Deprecated in favour of the field \"type\" ",
+            "type": "string"
+          },
+          "position_intent": {
+            "$ref": "#/components/schemas/PositionIntent"
+          },
+          "qty": {
+            "description": "Ordered quantity. If entered, notional will be null. Can take up to 9 decimal points.",
+            "minLength": 1,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "replaced_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "replaced_by": {
+            "description": "The order ID that this order was replaced by",
+            "format": "uuid",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "replaces": {
+            "description": "The order ID that this order replaces",
+            "format": "uuid",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "side": {
+            "$ref": "#/components/schemas/OrderSide"
+          },
+          "status": {
+            "$ref": "#/components/schemas/OrderStatus"
+          },
+          "stop_price": {
+            "description": "Stop price",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "submitted_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "symbol": {
+            "description": "Asset symbol",
+            "minLength": 1,
+            "type": "string"
+          },
+          "time_in_force": {
+            "$ref": "#/components/schemas/TimeInForce"
+          },
+          "trail_percent": {
+            "description": "The percent value away from the high water mark for trailing stop orders.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "trail_price": {
+            "description": "The dollar value away from the high water mark for trailing stop orders.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "$ref": "#/components/schemas/OrderType"
+          },
+          "updated_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "symbol",
+          "type",
+          "time_in_force",
+          "notional",
+          "qty",
+          "side"
+        ],
+        "title": "Order",
+        "type": "object"
+      },
+      "OrderSide": {
+        "description": "Represents which side this order was on:\n- buy\n- sell\nRequired for all order classes except for mleg.",
+        "enum": [
+          "buy",
+          "sell"
+        ],
+        "example": "buy",
+        "title": "OrderSide",
+        "type": "string"
+      },
+      "OrderStatus": {
+        "description": "An order executed through Alpaca can experience several status changes during its lifecycle. The most common statuses are described in detail below:\n\n- new\n  The order has been received by Alpaca, and routed to exchanges for execution. This is the usual initial state of an order.\n\n- partially_filled\n  The order has been partially filled.\n\n- filled\n  The order has been filled, and no further updates will occur for the order.\n\n- done_for_day\n  The order is done executing for the day, and will not receive further updates until the next trading day.\n\n- canceled\n  The order has been canceled, and no further updates will occur for the order. This can be either due to a cancel request by the user, or the order has been canceled by the exchanges due to its time-in-force.\n\n- expired\n  The order has expired, and no further updates will occur for the order.\n\n- replaced\n  The order was replaced by another order, or was updated due to a market event such as corporate action.\n\n- pending_cancel\n  The order is waiting to be canceled.\n\n- pending_replace\n  The order is waiting to be replaced by another order. The order will reject cancel request while in this state.\n\nLess common states are described below. Note that these states only occur on very rare occasions, and most users will likely never see their orders reach these states:\n\n- accepted\n  The order has been received by Alpaca, but hasn't yet been routed to the execution venue. This could be seen often out side of trading session hours.\n\n- pending_new\n  The order has been received by Alpaca, and routed to the exchanges, but has not yet been accepted for execution. This state only occurs on rare occasions.\n\n- accepted_for_bidding\n  The order has been received by exchanges, and is evaluated for pricing. This state only occurs on rare occasions.\n\n- stopped\n  The order has been stopped, and a trade is guaranteed for the order, usually at a stated price or better, but has not yet occurred. This state only occurs on rare occasions.\n\n- rejected\n  The order has been rejected, and no further updates will occur for the order. This state occurs on rare occasions and may occur based on various conditions decided by the exchanges.\n\n- suspended\n  The order has been suspended, and is not eligible for trading. This state only occurs on rare occasions.\n\n- calculated\n  The order has been completed for the day (either filled or done for day), but remaining settlement calculations are still pending. This state only occurs on rare occasions.\n\n\nAn order may be canceled through the API up until the point it reaches a state of either filled, canceled, or expired.",
+        "enum": [
+          "new",
+          "partially_filled",
+          "filled",
+          "done_for_day",
+          "canceled",
+          "expired",
+          "replaced",
+          "pending_cancel",
+          "pending_replace",
+          "accepted",
+          "pending_new",
+          "accepted_for_bidding",
+          "stopped",
+          "rejected",
+          "suspended",
+          "calculated",
+          "held"
+        ],
+        "example": "new",
+        "title": "OrderStatus",
+        "type": "string"
+      },
+      "OrderType": {
+        "description": "The order types supported by Alpaca vary based on the order's security type. The following provides a comprehensive breakdown of the supported order types for each category:\n - Equity trading: market, limit, stop, stop_limit, trailing_stop.\n - Options trading: market, limit, stop, stop_limit.\n - Multileg Options trading: market, limit.\n - Crypto trading: market, limit, stop_limit.",
+        "enum": [
+          "market",
+          "limit",
+          "stop",
+          "stop_limit",
+          "trailing_stop"
+        ],
+        "example": "market",
+        "title": "OrderType",
+        "type": "string"
+      },
+      "PatchOrderRequest": {
+        "description": "Represents a request to patch an order.\n\nNote: `qty` and `notional` are mutually exclusive on a single replace request. `notional` is only valid for IPO indications of interest (`asset_class: \"ipo\"`); non-IPO notional orders cannot be replaced at all.",
+        "properties": {
+          "advanced_instructions": {
+            "$ref": "#/components/schemas/AdvancedInstructions"
+          },
+          "client_order_id": {
+            "description": "A unique identifier for the new order. Automatically generated if not sent. (<= 128 characters)",
+            "maxLength": 128,
+            "type": "string"
+          },
+          "limit_price": {
+            "description": "Required if original order's `type` field was `limit` or `stop_limit`.\nIn case of `mleg`, the limit_price parameter is expressed with the following notation:\n- A positive value indicates a debit, representing a cost or payment to be made.\n- A negative value signifies a credit, reflecting an amount to be received.",
+            "example": "3.14",
+            "type": "string"
+          },
+          "notional": {
+            "description": "New notional (dollar amount) for the order. Only valid for IPO indications of interest (`asset_class: \"ipo\"`); will be rejected for any other asset class.\nMutually exclusive with `qty` on the same replace request.",
+            "example": "750",
+            "type": "string"
+          },
+          "qty": {
+            "description": "number of shares to trade.\n\nYou can only patch full shares for now.\n\nQty of equity fractional orders are not allowed to change. Non-IPO notional orders cannot be replaced at all - no fields (qty, limit_price, stop_price, etc.) can be modified; cancel and resubmit instead.",
+            "example": "4",
+            "type": "string"
+          },
+          "stop_price": {
+            "description": "required if original order type is limit or stop_limit",
+            "example": "3.14",
+            "type": "string"
+          },
+          "time_in_force": {
+            "$ref": "#/components/schemas/TimeInForce"
+          },
+          "trail": {
+            "description": "the new value of the trail_price or trail_percent value (works only for type=\"trailing_stop\")",
+            "example": "3.14",
+            "type": "string"
+          }
+        },
+        "title": "PatchOrderRequest",
+        "type": "object"
+      },
+      "PositionIntent": {
+        "description": "Represents the desired position strategy.",
+        "enum": [
+          "buy_to_open",
+          "buy_to_close",
+          "sell_to_open",
+          "sell_to_close"
+        ],
+        "example": "buy_to_open",
+        "title": "PositionIntent",
+        "type": "string"
+      },
+      "TimeInForce": {
+        "description": "The Time-In-Force values supported by Alpaca vary based on the order's security type. Here is a breakdown of the supported TIFs for each specific security type:\n- Equity trading: day, gtc, opg, cls, ioc, fok.\n- Options trading: day, gtc.\n- Crypto trading: gtc, ioc.\n\nBelow are the descriptions of each TIF:\n- day:\n  A day order is eligible for execution only on the day it is live. By default, the order is only valid during Regular Trading Hours (9:30am - 4:00pm ET). If unfilled after the closing auction, it is automatically canceled. If submitted after the close, it is queued and submitted the following trading day. However, if marked as eligible for extended hours, the order can also execute during supported extended hours.\n\n- gtc:\n  The order is good until canceled. Non-marketable GTC limit orders are subject to price adjustments to offset corporate actions affecting the issue. We do not currently support Do Not Reduce (DNR) orders to opt out of such price adjustments.\n\n- opg:\n  Use this TIF with a market/limit order type to submit \"market on open\" (MOO) and \"limit on open\" (LOO) orders. This order is eligible to execute only in the market opening auction. Any unfilled orders after the open will be cancelled. OPG orders submitted after 9:28am but before 7:00pm ET will be rejected. OPG orders submitted after 7:00pm will be queued and routed to the following day's opening auction. On open/on close orders are routed to the primary exchange. Such orders do not necessarily execute exactly at 9:30am / 4:00pm ET but execute per the exchange's auction rules.\n\n- cls:\n  Use this TIF with a market/limit order type to submit \"market on close\" (MOC) and \"limit on close\" (LOC) orders. This order is eligible to execute only in the market closing auction. Any unfilled orders after the close will be cancelled. CLS orders submitted after 3:50pm but before 7:00pm ET will be rejected. CLS orders submitted after 7:00pm will be queued and routed to the following day's closing auction. Only available with API v2.\n\n- ioc:\n  An Immediate Or Cancel (IOC) order requires all or part of the order to be executed immediately. Any unfilled portion of the order is canceled. Only available with API v2. Most market makers who receive IOC orders will attempt to fill the order on a principal basis only, and cancel any unfilled balance. On occasion, this can result in the entire order being cancelled if the market maker does not have any existing inventory of the security in question.\n\n- fok:\n  A Fill or Kill (FOK) order is only executed if the entire order quantity can be filled, otherwise the order is canceled. Only available with API v2.",
+        "enum": [
+          "day",
+          "gtc",
+          "opg",
+          "cls",
+          "ioc",
+          "fok"
+        ],
+        "example": "day",
+        "title": "TimeInForce",
+        "type": "string"
+      }
+    },
+    "securitySchemes": {
+      "API_Key": {
+        "description": "",
+        "in": "header",
+        "name": "APCA-API-KEY-ID",
+        "type": "apiKey"
+      },
+      "API_Secret": {
+        "description": "",
+        "in": "header",
+        "name": "APCA-API-SECRET-KEY",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "contact": {
+      "email": "support@alpaca.markets",
+      "name": "Alpaca Support",
+      "url": "https://alpaca.markets/support"
+    },
+    "description": "Alpaca's Trading API is a modern platform for algorithmic trading.",
+    "termsOfService": "https://s3.amazonaws.com/files.alpaca.markets/disclosures/library/TermsAndConditions.pdf",
+    "title": "Trading API",
+    "version": "2.0.1"
+  },
+  "openapi": "3.1.2",
+  "paths": {
+    "/v2/orders/{order_id}": {
+      "parameters": [
+        {
+          "description": "order id",
+          "in": "path",
+          "name": "order_id",
+          "required": true,
+          "schema": {
+            "format": "uuid",
+            "type": "string"
+          }
+        }
+      ],
+      "patch": {
+        "description": "Replaces a single order with updated parameters. Each parameter overrides the corresponding attribute of the existing order. The other attributes remain the same as the existing order.\n\nA success return code from a replaced order does NOT guarantee the existing open order has been replaced. If the existing open order is filled before the replacing (new) order reaches the execution venue, the replacing (new) order is rejected, and these events are sent in the trade_updates stream channel.\n\nWhile an order is being replaced, buying power is reduced by the larger of the two orders that have been placed (the old order being replaced, and the newly placed order to replace it). If you are replacing a buy entry order with a higher limit price than the original order, the buying power is calculated based on the newly placed order. If you are replacing it with a lower limit price, the buying power is calculated based on the old order.\n\nNote: Order cannot be replaced when the status is `accepted`, `pending_new`, `pending_cancel` or `pending_replace`.\n\nNote: Notional orders for non-IPO asset classes cannot be replaced. Any attempt to modify a non-IPO notional order via this endpoint will be rejected; cancel it and submit a new one instead.\n\nNote: IPO indications of interest (`asset_class: \"ipo\"`) **are** notional and **can** be replaced via this endpoint by providing a new `notional` value. `qty` and `notional` are mutually exclusive on a single replace request.\n",
+        "operationId": "patchOrderByOrderId",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "Equity": {
+                  "summary": "Increase qty and limit price on an equity order",
+                  "value": {
+                    "limit_price": "155",
+                    "qty": "4",
+                    "time_in_force": "gtc"
+                  }
+                },
+                "IPO": {
+                  "summary": "Update notional on an IPO indication of interest",
+                  "value": {
+                    "notional": "750"
+                  }
+                },
+                "Options": {
+                  "summary": "Adjust an option order's limit price",
+                  "value": {
+                    "limit_price": "11.25",
+                    "time_in_force": "day"
+                  }
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/PatchOrderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Equity": {
+                    "$ref": "#/components/examples/EquityOrderResponse"
+                  },
+                  "IPO": {
+                    "$ref": "#/components/examples/IPOOrderResponse"
+                  },
+                  "Options": {
+                    "$ref": "#/components/examples/OptionOrderResponse"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            },
+            "description": "Successful response\n\nThe new Order object with the new order ID."
+          }
+        },
+        "summary": "Replace Order by ID",
+        "tags": [
+          "Orders"
+        ]
+      }
+    }
+  },
+  "security": [
+    {
+      "API_Key": [],
+      "API_Secret": []
+    }
+  ],
+  "servers": [
+    {
+      "description": "Paper",
+      "url": "https://paper-api.alpaca.markets"
+    },
+    {
+      "description": "Live",
+      "url": "https://api.alpaca.markets"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Orders"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "proxy-enabled": false
+  }
+}
+```
