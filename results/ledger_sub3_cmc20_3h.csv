@@ -1,0 +1,2 @@
+trade_id,timestamp,symbol,side,entry_price,exit_price,size_nominal,leverage,pnl_net,fees,exit_reason,return_pct,balance_after,slice_idx,substrategy
+1,2026-02-15 12:00:00+00:00,CMC20_INDEX,LONG,145.58524715870192,142.02912115747492,420.325988667358,20.0,-10.47722099961381,0.29422819206715056,STOP_LOSS,-8.737138243462018,109.43871380265273,32,sub3_cmc20_basket

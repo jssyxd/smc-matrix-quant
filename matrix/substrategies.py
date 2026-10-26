@@ -224,7 +224,7 @@ class SubstrategyRunner:
 
     def run_cmc20_basket(self, cmc_df: pd.DataFrame) -> Tuple[List[TradeRecord], BacktestSummaryReport]:
         """Sub-strategy 3: CMC20 synthetic index basket tracking with synchronized fills."""
-        val = cmc_df['value'].values
+        val = cmc_df['value'].values if 'value' in cmc_df.columns else cmc_df['close'].values
         ret = np.abs(pd.Series(val).pct_change().fillna(0.001).values)
         df_basket = pd.DataFrame(index=cmc_df.index)
         df_basket['open'] = val * (1.0 - ret * 0.25)
@@ -232,7 +232,6 @@ class SubstrategyRunner:
         df_basket['low'] = val * (1.0 - ret * 0.75)
         df_basket['close'] = val
         df_basket['volume'] = ret * 1e7 + 1000.0
-
         df_feat = extract_features(df_basket)
         engine = RealisticExecutionEngine(self.config)
         all_trades: List[TradeRecord] = []

@@ -10,11 +10,14 @@ from enum import Enum
 from typing import Dict, List, Optional, Any
 import pandas as pd
 
-
 class TimeFrame(str, Enum):
     TF_5M = "5m"
     TF_15M = "15m"
     TF_30M = "30m"
+    TF_1H = "1h"
+    TF_2H = "2h"
+    TF_3H = "3h"
+    TF_4H = "4h"
 
 
 class SubstrategyType(str, Enum):
